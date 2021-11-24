@@ -1,5 +1,24 @@
 # FrontendAngular
 
+Instalar Angular
+
+    1. Visitar https://angular.io/guide/setup-local
+
+    2. Instalar en visual studio code:
+        npm install -g @angular/cli
+
+    3. Crear la Aplicacion con el Nombre "FrontendAngular"
+        ng new FrontendAngular
+
+    4. Para Ejecutar:
+        ng serve -open
+        ng s -o
+
+    4. Crear Modulos
+        ng generate module modulos/seguridad --routing
+        ng generate module modulos/administracion --routing
+        ng generate module modulos/pedidos --routing
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
