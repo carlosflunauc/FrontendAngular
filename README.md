@@ -41,6 +41,9 @@ Instalar Angular
         <app-banner-navegacion></app-banner-navegacion>
         <router-outlet></router-outlet>
         <app-footer></app-footer>
+    
+    9. Instalar Materialize
+        npm install materialize-css@next
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
