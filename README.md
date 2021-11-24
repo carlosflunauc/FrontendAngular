@@ -14,10 +14,24 @@ Instalar Angular
         ng serve -open
         ng s -o
 
-    4. Crear Modulos
+    5. Crear Modulos
         ng generate module modulos/seguridad --routing
         ng generate module modulos/administracion --routing
         ng generate module modulos/pedidos --routing
+
+    6. Crear Compomentes
+
+        Modulo seguridad
+            ng g c modulos/seguridad/identificacion
+            ng g c modulos/seguridad/cambio-clave
+            ng g c modulos/seguridad/recuperar-clave
+        
+        Modulo administracion
+            ng g c modulos/administracion/personas
+            ng g c modulos/administracion/productos
+
+        Modulo pedidos
+            ng g c modulos/pedidos/realizar-pedido
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
