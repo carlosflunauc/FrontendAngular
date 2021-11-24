@@ -33,6 +33,16 @@ Instalar Angular
         Modulo pedidos
             ng g c modulos/pedidos/realizar-pedido
 
+    7. Creacion de Plantilla
+        ng g c plantilla/banner-navegacion
+        ng g c plantilla/footer
+    
+    8. Editamos app.component.html de App para agregar los componentes de la plantilla
+        <app-banner-navegacion></app-banner-navegacion>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
