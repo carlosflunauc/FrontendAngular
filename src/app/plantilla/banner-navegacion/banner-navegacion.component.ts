@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerNavegacionComponent implements OnInit {
 
+  seInicioSesion: boolean= false;
+  
   constructor() { }
 
   ngOnInit(): void {
