@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdministracionRoutingModule } from './administracion-routing.module';
-import { PersonasComponent } from './personas/personas.component';
-import { ProductosComponent } from './productos/productos.component';
 import { CrearUsuarioComponent } from './personas/crear-usuario/crear-usuario.component';
 import { BuscarUsuarioComponent } from './personas/buscar-usuario/buscar-usuario.component';
 import { EditarUsuarioComponent } from './personas/editar-usuario/editar-usuario.component';
@@ -16,8 +14,6 @@ import { EliminarProductoComponent } from './productos/eliminar-producto/elimina
 
 @NgModule({
   declarations: [
-    PersonasComponent,
-    ProductosComponent,
     CrearUsuarioComponent,
     BuscarUsuarioComponent,
     EditarUsuarioComponent,
