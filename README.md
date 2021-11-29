@@ -11,7 +11,7 @@ Instalar Angular
         ng new FrontendAngular
 
     4. Para Ejecutar:
-        ng serve -open
+        ng serve --open
         ng s -o
 
     5. Crear Modulos
