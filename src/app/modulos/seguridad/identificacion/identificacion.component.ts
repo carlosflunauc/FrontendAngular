@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as CryptoJS from 'crypto-js';
@@ -17,7 +18,8 @@ export class IdentificacionComponent implements OnInit {
     'clave':['',[Validators.required]]
   });
   constructor(private fb: FormBuilder, 
-   private servicioSeguridad: SeguridadService ) { }
+   private servicioSeguridad: SeguridadService,
+   private router: Router ) { }
   ngOnInit(): void {
   }
 
@@ -25,10 +27,9 @@ export class IdentificacionComponent implements OnInit {
     let usuario=this.fgValidador.controls["usuario"].value;
     let clave = this.fgValidador.controls["clave"].value;
     let claveCifrada = CryptoJS.MD5(clave).toString();
-    //alert(usuario)
-    //alert(clave)
     this.servicioSeguridad.Identificar(usuario, claveCifrada).subscribe((datos:any) => {
       this.servicioSeguridad.AlmacenarSesion(datos);
+      this.router.navigate(["/inicio"]);
       //alert("Datos Correctos")
     }, (error: any)=> {
       alert("Datos Invalidos")
