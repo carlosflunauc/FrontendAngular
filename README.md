@@ -34,8 +34,8 @@ Instalar Angular
             ng g c modulos/pedidos/realizar-pedido
 
     7. Creacion de Plantilla
-        ng g c plantilla/banner-navegacion
-        ng g c plantilla/footer
+            ng g c plantilla/banner-navegacion
+            ng g c plantilla/footer
     
     8. Editamos app.component.html de App para agregar los componentes de la plantilla
         <app-banner-navegacion></app-banner-navegacion>
