@@ -55,6 +55,10 @@ Instalar Angular
         import CryptoJS = require('crypto-js');
 
 
+    11. Instalar servicios para producto
+        ng g s servicios/producto
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
