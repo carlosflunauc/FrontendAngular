@@ -14,7 +14,7 @@ const routes: Routes = [
   redirectTo : '/inicio'
 },
 /*{
-  path: "**",
+  path: '/**',
   component: ErrorComponent
 },*/
 {

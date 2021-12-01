@@ -54,7 +54,6 @@ ObtenerInformacionSesion(){
   if(datosString){
     let datos = JSON.parse(datosString);
     return datos;
-
   }else{
     return null;
   }
