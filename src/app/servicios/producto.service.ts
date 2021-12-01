@@ -9,8 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class ProductoService {
   
-  url='http://127.0.0.1:3000';
-  token: String ='';
+  url = 'http://127.0.0.1:3000';
+  
+  token: String = '';
 
   constructor(private http: HttpClient, private seguridadServicio: SeguridadService) {
     this.token =this.seguridadServicio.ObtenerToken(); 
@@ -20,16 +21,20 @@ export class ProductoService {
     return this.http.get<ModeloProducto[]>(`${this.url}/productos`);
   }
 
+  ObtenerRegistrosPorId(id: string): Observable<ModeloProducto>{
+    return this.http.get<ModeloProducto>(`${this.url}/productos/${id}`);
+  }
+
   CrearProducto(producto: ModeloProducto): Observable<ModeloProducto>{
-    return this.http.post<ModeloProducto>(`${this.url}/productos`,producto,{
+    return this.http.post<ModeloProducto>(`${this.url}/productos`, producto,{
       headers: new HttpHeaders({
-        'Authorization': `Bearer${this.token}`
+        'Authorization': `Bearer ${this.token}`
       })
     })
   }
 
   ActualizarProducto(producto: ModeloProducto): Observable<ModeloProducto>{
-    return this.http.put<ModeloProducto>(`${this.url}/productos`,producto,{
+    return this.http.put<ModeloProducto>(`${this.url}/productos/${producto.id}`,producto,{
       headers: new HttpHeaders({
         'Authorization': `Bearer${this.token}`
       })
